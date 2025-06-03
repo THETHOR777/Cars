@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of Cars</title>
+    <link rel="shortcut icon" href="2.png">
+    <link rel="stylesheet" href="prb.css">
+    <script defer src="pvp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="top-rectangle" id="header">
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="prueba.html"><i class="fas fa-home"></i> INICIO</a></li>
+                <li><a href="autos.html"><i class="fas fa-car"></i> AUTOS</a></li>
+                <li><a href="motos.html"><i class="fas fa-motorcycle"></i> MOTOS</a></li>
+                <li><a href="deportivos.html"><i class="fas fa-car"></i> DEPORTIVOS</a></li>
+                <li><a href="contacto.html"><i class="fas fa-phone"></i> CONTACTANOS</a></li>
+            </ul>
+            <h1 class="logo">WAR OF CARS</h1>
+        </nav>
+        <img class="logo-f" src="2.png" alt="Logo" id="imagen">
+        <audio src="motorcycle2-107439.mp3" id="audio"></audio>
+    </header>
+    <main class="product-detail">
+        <div id="main-products" class="product-grid" >
+            <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="CRF 450 R| Año 2024"
+            data-price="$220,490"
+            data-image="crf-450.jpg"
+            data-description="La Honda CRF450R es una motocicleta de motocross de alto rendimiento, diseñada para pilotos experimentados que buscan lo máximo en potencia y agilidad en la pista."
+            data-specs='{ "Motor": "Monocilíndrico 449cc",
+            "Tipo": "4 tiempos, refrigerado por líquido",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "Showa ajustable"}'>
+            <img src="crf-450.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">CRF 450 R| Año 2024</h3>
+                 <p class="price">$220,490</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Yamaha 250| Año 2025"
+            data-price="$214,999"
+            data-image="YZ-250.png"
+            data-description="La Yamaha YZ250 es una motocicleta de motocross de 2 tiempos legendaria, apreciada por su ligereza, potencia explosiva y agilidad."
+            data-specs='{"Motor": "Monocilíndrico 250cc",
+            "Tipo": "4 tiempos, refrigerado por líquido",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "KYB totalmente ajustable" }'>
+            <img src="YZ-250.png" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Yamaha 250| Año 2025</h3>
+                 <p class="price">$214,999</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Honda XR 190| Año 2025"
+            data-price="$60,000"
+            data-image="xr-190.jpg"
+            data-description="La Honda XR190L es una motocicleta doble propósito, ideal para el uso diario y para explorar caminos sin pavimentar ligeros.            "
+            data-specs='{ "Motor": "Monocilíndrico 184cc",
+            "Tipo": "4 tiempos, refrigerado por aire",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "Telescópica / Monoamortiguador"}'>
+            <img src="xr-190.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Honda XR 190| Año 2025</h3>
+                 <p class="price">$60,000</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Honda XR 150| Año 2025"
+            data-price="$50,000"
+            data-image="xr-150.jpg"
+            data-description="Similar a la XR190L, la XR150L es una motocicleta doble propósito de menor cilindrada, enfocada en la economía y la facilidad de manejo.            "
+            data-specs='{  "Motor": "Monocilíndrico 149cc",
+            "Tipo": "4 tiempos, refrigerado por aire",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "Telescópica / Doble amortiguador"}'>
+            <img src="xr-150.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Honda XR 150| Año 2025</h3>
+                 <p class="price">$50,000</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Kawasaki Ninja H2r| Año 2023"
+            data-price="$849,990"
+            data-image="Kawasaki-Ninja-H2R-1.jpg"
+            data-description="La Kawasaki Ninja H2R es una motocicleta hipercargada de pista, conocida por su potencia extrema y su diseño futurista.
+            Equipada con un motor tetracilíndrico en línea de 998cc con un supercargador, produciendo una potencia asombrosa (más de 300 hp).
+           "
+            data-specs='{ "Motor": "4 cilindros en línea 998cc",
+            "Potencia": "310 HP (hasta 326 HP con RAM air)",
+            "Velocidad Máxima": "400+ km/h",
+            "Transmisión": "6 velocidades, quickshifter"}'>
+            <img src="Kawasaki-Ninja-H2R-1.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Kawasaki Ninja H2r| Año 2023</h3>
+                 <p class="price">$849,990</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Kawasaki Ninja ZX10r| Año 2025"
+            data-price="$419,990"
+            data-image="ninja zx10r.jpg"
+            data-description="La Kawasaki Ninja ZX-10R es una motocicleta deportiva de alto rendimiento, diseñada para la pista pero también homologada para la calle.
+            Equipada con un motor tetracilíndrico en línea de 998cc, refrigerado por líquido, que ofrece una potencia impresionante y una entrega lineal.
+           "
+            data-specs='{ "Motor": "4 cilindros en línea 998cc",
+            "Potencia": "203 HP",
+            "Transmisión": "6 velocidades con quickshifter",
+            "Electrónica": "IMU, control de tracción, modos de manejo"}'>
+            <img src="ninja zx10r.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Kawasaki Ninja ZX10r| Año 2025</h3>
+                 <p class="price">$419,990</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Yamaha R6| Año 2024"
+            data-price="$300,279"
+            data-image="r6.jpg"
+            data-description="La Yamaha YZF-R6 es una motocicleta deportiva fue fabricada por Yamaha en Japón y exportada a varios países. Fue lanzada en 1999"
+            data-specs='{ "Motor": "4 cilindros en línea 599cc",
+            "Potencia": "117 HP",
+            "Transmisión": "6 velocidades",
+            "Electrónica": "Control de tracción, modos de manejo"}'>
+            <img src="r6.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Yamaha YZF R6| Año 2024</h3>
+                 <p class="price">$300,279</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Yamaha Mt-09| Año 2025"
+            data-price="$299,999"
+            data-image="MT-09.jpg"
+            data-description="La Yamaha MT-09 es un motocicleta estándar de motor en línea tricilíndrica de 847 cc. Tiene el nuevo motor tipo (desaxé), un marco de aleación de aluminio, y horquilla invertida"
+            data-specs='{ "Motor": "3 cilindros en línea 890cc",
+            "Potencia": "117 HP",
+            "Transmisión": "6 velocidades con quickshifter",
+            "Suspensión": "Invertida delantera / Monoamortiguador trasero" }'>
+            <img src="MT-09.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Yamaha Mt-09| Año 2025</h3>
+                 <p class="price">$299,999</p>
+            </div>
+        </div>
+        <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Crossmax 300 PRO| Año 2025"
+            data-price="$38,999"
+            data-image="cros 300.png"
+            data-description="La Vento Crossmax 300 Pro combina un diseño robusto y moderno con tecnología avanzada, ideal para enfrentar terrenos difíciles y rutas urbanas con estabilidad "
+            data-specs='{  "Motor": "Monocilíndrico 300cc",
+            "Tipo": "4 tiempos, refrigerado por líquido",
+            "Transmisión": "6 velocidades",
+            "Suspensión": "Invertida / Monoamortiguador"}'>
+            <img src="cros 300.png" alt="" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Crossmax 300 PRO| Año 2025</h3>
+                <p class="price">$38,999</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Crossmax Rally| Año 2025"
+            data-price="$35,999"
+            data-image="rally.jpg"
+            data-description="Con un motor de 300 cc, esta moto ofrece una potencia superior, adecuada para recorridos fuera de la carretera y largos trayectos. Su estructura robusta"
+            data-specs='{ "Motor": "Monocilíndrico 250cc",
+            "Tipo": "4 tiempos, refrigerado por aire",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "Invertida / Monoamortiguador"}'>
+            <img src="rally.jpg" alt="" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Crossmax Rally| Año 2025</h3>
+                <p class="price">$35,999</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Crossmax 220| Año 2025"
+            data-price="$29,999"
+            data-image="cros 220.jpg"
+            data-description="La Vento Crossmax 220 MX 2025 es una doble propósito versátil diseñada tanto para el uso en carretera como para aventuras fuera de ella.
+            Equipada con un motor de 4 tiempos y una cilindrada de 220 cc, ofrece un rendimiento impresionante y una experiencia de conducción potente, con una capacidad de 12 litros de gasolina y un consumo de aproximadamente 30 km por litro.
+            "
+            data-specs='{ "Motor": "Monocilíndrico 223cc",
+            "Tipo": "4 tiempos, refrigerado por aire",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "Telescópica / Monoamortiguador"}'>
+            <img src="cros 220.jpg" alt="" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Crossmax 220| Año 2025</h3>
+                <p class="price">$29,999</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Crossmax 170| Año 2024"
+            data-price="$27,999"
+            data-image="cros 170.jpg"
+            data-description="La Vento Crossmax 170 2025 es una motocicleta doble propósito diseñada para adaptarse a diversas condiciones de terreno. Con un motor de 170 cc, ofrece una buena combinación de potencia y eficiencia, ideal para aquellos que buscan una moto versátil tanto para la ciudad como para caminos más complicados."
+            data-specs='{ "Motor": "Monocilíndrico 170cc",
+            "Tipo": "4 tiempos, refrigerado por aire",
+            "Transmisión": "5 velocidades",
+            "Suspensión": "Telescópica / Monoamortiguador" }'>
+            <img src="cros 170.jpg" alt="" class="product-image">
+            <div class="product-info">
+                <h3 class="product-title">Crossmax 170| Año 2024</h3>
+                <p class="price">$27,999</p>
+            </div>
+        </div>
+   
+        
+        
+        
+        
+        
+        
+
+
+
+
+        
+
+      </div>
+    </main>
+    
+    <script>
+        // Obtén el elemento de la imagen y del audio
+        const imagen = document.getElementById('imagen');
+        const audio = document.getElementById('audio');
+
+        // Añade un evento de clic a la imagen
+        imagen.addEventListener('click', () => {
+            audio.play(); // Reproduce el sonido
+        });
+
+
+        function verDetalle(element) {
+    const carInfo = {
+      title: element.dataset.title,
+      price: element.dataset.price,
+      image: element.dataset.image,
+      description: element.dataset.description,
+      specs: JSON.parse(element.dataset.specs)
+    };
+
+    localStorage.setItem('car-info', JSON.stringify(carInfo));
+    window.location.href = "detalle.html"; // o el nombre de tu página de detalle
+  }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detalle del Vehículo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="2.png">
+  
+  <style>
+  
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #111;
+      color: #ffffff;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .container {
+      flex: 1;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      background: #F7F8F8;  
+      background: -webkit-linear-gradient(to right, #ACBB78, #F7F8F8);  
+      background: linear-gradient(to right, #ACBB78, #F7F8F8); 
+      
+    }
+
+    .car-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      object-fit: cover;
+    }
+
+    .car-info {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .car-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: #222;
+      
+    }
+
+    .car-price {
+      font-size: 30px;
+      font-weight: 600;
+      color: #00a308;
+    }
+
+    .car-description {
+      font-size: 18px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .car-specs {
+      margin-top: 20px;
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 30px;
+      margin-top: 10px;
+    }
+
+    .spec-item {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .action-buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .btn {
+      background-color: #1a73e8;
+      color: rgb(255, 255, 255);
+      border: none;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #1558c2;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+      }
+      .car-title {
+        font-size: 28px;
+      }
+      .car-price {
+        font-size: 24px;
+      }
+      .car-description {
+        font-size: 16px;
+      }
+    } 
+
+    marquee{
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>Detalles del Vehículo</header>
+
+<div class="container">
+  <div class="car-image">
+    <img id="car-image" src="" alt="Imagen del Vehículo">
+  </div>
+
+  <div class="car-info">
+     <marquee behavior="scroll" direction="right" scrollamount ="20">
+    <div class="car-title" id="car-title">Nombre del Vehículo</div>
+  </marquee>
+    <div class="car-price" id="car-price">$0</div>
+    <div class="car-description" id="car-description">Descripción del vehículo aquí...</div>
+
+    <div class="car-specs">
+      <h3>Características:</h3>
+      <div class="specs-grid" id="specs-grid">
+      
+      </div>
+    </div>
+
+    <div class="action-buttons">
+      <button class="btn" onclick="window.history.back()">← Regresar</button>
+      <a href="contacto.html" class="btn">Cotizar Ahora</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Obtener los datos del vehículo desde el localStorage
+  const carInfo = JSON.parse(localStorage.getItem('car-info'));
+
+  if (carInfo) {
+    // Mostrar información básica del vehículo
+    document.getElementById('car-title').innerText = carInfo.title;
+    document.getElementById('car-image').src = carInfo.image;
+    document.getElementById('car-price').innerText = carInfo.price;
+    document.getElementById('car-description').innerText = carInfo.description || "Descripción no disponible.";
+
+    // Obtener y mostrar las características
+    const specs = carInfo.specs || {};
+
+    const specsGrid = document.getElementById('specs-grid');
+    specsGrid.innerHTML = Object.entries(specs).map(([key, value]) => `
+      <div class="spec-item"><strong>${key}:</strong> ${value}</div>
+    `).join('');
+  } else {
+    document.querySelector('.container').innerHTML = "<h2 style='padding: 20px;'>No se encontró información del vehículo.</h2>";
+  }
+</script>
+
+</body>
+</html>
+

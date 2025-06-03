@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of cars</title>
+    <link rel="shortcut icon" href="2.png">
+    <link rel="stylesheet" href="prb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script defer src="products.js"></script>
+    <script defer src="pvp.js"></script>
+</head>
+
+<body class="product-detail-page">
+    <header class="top-rectangle" id="header">
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="prueba.html"><i class="fas fa-home"></i>INICIO</a></li>
+                <li><a href="motos.html"><i class="fas fa-motorcycle"></i>MOTOS</a></li>
+                <li><a href="deportivos.html"><i class="fas fa-car"></i>DEPORTIVOS</a></li>
+                <li class="contacto"><a href="off-road.html"><i class="fas fa-truck-pickup"></i>OFF-ROAD</a>
+                 <div class="contact-info">
+                    <p>755-113-8776</p>
+                 </div>
+                </li>
+            </ul>
+            
+        </nav>
+        <div>
+            <h1 class="logo">WAR OF CARS</h1>
+        </div>
+        <img class="logo-f" src="2.png" alt="">
+    </header>
+
+    <main class="product-detail">
+        <div class="product-detail-card" id="product-detail-card">
+            <img id="product-detail-image" src="" alt="Imagen del Producto">
+            <div class="product-detail-info">
+                <h2 id="product-detail-title" class="product-detail-title"></h2>
+                <div class="description" id="product-detail-description"></div>
+                <p class="price" id="product-detail-price"></p>
+                <select class="product-options" id="product-options"></select>
+               
+                <h3 class="info">Motor y especificaciones</h3>
+                <h4 class="v"></h4>
+                
+            </div>
+        </div>
+    </main>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtener parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            const productImage = urlParams.get('image');
+            const productTitle = urlParams.get('title');
+            const productDescription = urlParams.get('description');
+            const productPrice = urlParams.get('price');
+            const productOptions = urlParams.get('options') ? urlParams.get('options').split(',') : [];
+
+            // Mostrar los detalles del producto
+            document.getElementById('product-detail-image').src = productImage;
+            document.getElementById('product-detail-title').innerText = productTitle;
+            document.getElementById('product-detail-description').textContent = productDescription;
+            document.getElementById('product-detail-price').innerText = productPrice;
+
+            // Agregar opciones de producto al select
+            const selectElement = document.getElementById('product-options');
+            selectElement.innerHTML = ''; // Limpiar opciones existentes
+            productOptions.forEach(option => {
+                const optionElement = document.createElement('option');
+                optionElement.value = option;
+                optionElement.textContent = option;
+                selectElement.appendChild(optionElement);
+            });
+
+            // Dividir la descripción en párrafos (si es necesario)
+            const descriptionElement = document.getElementById('product-detail-description');
+            const descriptionParagraphs = productDescription.split('\n\n');
+            descriptionElement.innerHTML = ''; // Limpiar contenido existente
+
+            descriptionParagraphs.forEach(paragraph => {
+                const p = document.createElement('p');
+                p.innerText = paragraph;
+                descriptionElement.appendChild(p);
+            });
+        });
+    </script>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

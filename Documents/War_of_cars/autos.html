@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of Cars</title>
+    <link rel="shortcut icon" href="2.png">
+    <link rel="stylesheet" href="prb.css">
+    <script defer src="pvp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="top-rectangle" id="header">
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="prueba.html"><i class="fas fa-home"></i> INICIO</a></li>
+                <li><a href="autos.html"><i class="fas fa-car"></i> AUTOS</a></li>
+                <li><a href="motos.html"><i class="fas fa-motorcycle"></i> MOTOS</a></li>
+                <li><a href="deportivos.html"><i class="fas fa-car"></i> DEPORTIVOS</a></li>
+                <li><a href="contacto.html"><i class="fas fa-phone"></i> CONTACTANOS</a></li>
+            </ul>
+            <h1 class="logo">WAR OF CARS</h1>
+        </nav>
+        <img class="logo-f" src="2.png" alt="Logo" id="imagen">
+        <audio src="motor-v8-plymouth-barracuda-encendido-acelerada-marcha-243224.mp3" id="audio"></audio>
+    </header>
+    <main class="product-detail">
+    <div id="main-products" class="product-grid" >
+
+    <div class="product-card" onclick="verDetalle(this)"
+     data-id=""
+     data-title="Ford Lobo Raptor | Año 2024"
+     data-price="$2,842,900"
+     data-image="raptor.jpg"
+     data-description="La Ford Lobo Raptor 2024 es una pickup todoterreno de alto rendimiento diseñada para conquistar los terrenos más difíciles sin sacrificar el confort y la tecnología."
+     data-specs='{
+        "Potencia": "450 HP",
+    "Torque": "510 lb-pie",
+    "Carga": "646 kg",
+    "Arrastre": "3,719 kg"
+   
+     }'>
+     
+  <img src="raptor.jpg" alt="Ford Lobo Raptor 2024" class="product-image">
+  <div class="product-info">
+    <h3 class="product-title">Ford Lobo Raptor | Año 2024</h3>
+    <p class="price">$2,842,900</p>
+  </div>
+</div>
+
+
+
+<div class="product-card" onclick="verDetalle(this)"
+     data-id=""
+     data-title="Ford F-150 | Año 2024"
+     data-price="$1,290,900"
+     data-image="f150.jpg"
+     data-description="La Ford F-150 2024 es una camioneta pickup de tamaño completo que ofrece una amplia gama de opciones en cuanto a diseño, tecnología, rendimiento y capacidad. Es una opción popular para aquellos que buscan una camioneta versátil para el trabajo, la familia o la aventura."
+     data-specs='{
+        "Motor": "3.5L PowerBoost V6 Híbrido",
+    "Potencia": "430 HP",
+    "Torque": "570 lb-pie",
+    "Arrastre": "13,500 lb (6,123 kg)"
+     }'>
+     
+  <img src="f150.jpg" alt="Ford Lobo Raptor 2024" class="product-image">
+  <div class="product-info">
+    <h3 class="product-title">Ford F-150 | Año 2024</h3>
+    <p class="price">$1,290,900</p>
+  </div>
+</div>
+
+
+<div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ford  Raptor F-150 | Año 2025"
+    data-price="$1,578,100"
+    data-image="f-15.jpg"
+    data-description="Similar al modelo 2024, pero potencialmente con mejoras en potencia, tecnología, suspensión o diseño."
+    data-specs='{
+        "Motor": "V8 Supercargado",
+        "Potencia": "720 HP",
+        "Suspensión": "FOX Racing Dual-Valve"
+     }'>
+
+    <img src="f-15.jpg" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ford  Raptor F-150 | Año 2025</h3>
+         <p class="price">$1,578,100</p>
+    </div>
+    </div>
+           
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ford Maverick | Año 2024"
+    data-price="$911,000"
+    data-image="maverick.png"
+    data-description=" Una camioneta versátil y urbana, ideal para quienes buscan la utilidad de una pick-up en un formato más manejable y económico. Ofrece una opción híbrida muy eficiente."
+    data-specs='{
+        "Motor": "EcoBoost 2.0L",
+        "Tracción": "AWD",
+        "Remolque": "4,000 lb (1,814 kg)",
+        "Distancia al suelo": "9.1\""
+     }'>
+    <img src="maverick.png" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ford Maverick | Año 2024</h3>
+         <p class="price">$911,000</p>
+    </div>
+</div>
+           
+            
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ford Super Duty F-250| Año 2024"
+    data-price="$2,398,00"
+    data-image="super-duty.png"
+    data-description="Una pick-up robusta y potente, construida para ofrecer la máxima capacidad y durabilidad en entornos de trabajo pesado."
+    data-specs='{ 
+        "Motor": "V8 6.8L",
+        "Transmisión": "Automática TorqShift de 10 velocidades",
+        "Tanque": "48 galones"
+    }'>
+    <img src="super-duty.png" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ford Super Duty F-250| Año 2024</h3>
+         <p class="price">$2,398,00</p>
+    </div>
+</div>
+    
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ford Ranger| Año 2025 "
+    data-price="$992,000"
+    data-image="ranger.png"
+    data-description="Una camioneta versátil que combina capacidad todoterreno, utilidad y tecnología moderna. Se posiciona entre la Maverick y la F-150.    "
+    data-specs='{
+        "Motor": "EcoBoost 2.3L",
+    "Tracción": "4x2 / 4x4 disponible",
+    "Remolque": "7,500 lb (3,402 kg)",
+    "Distancia al suelo": "9.3\""
+     }'>
+    <img src="ranger.png" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ford Ranger| Año 2025 </h3>
+         <p class="price">$992,000</p>
+    </div>
+</div>
+ 
+     <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ford Bronco Raptor| Año 2024"
+    data-price="$2,320,600"
+    data-image="bronco.png"
+    data-description=" Un SUV robusto y agresivo, diseñado para conquistar terrenos difíciles a alta velocidad. Comparte muchos componentes con la F-150 Raptor.    "
+    data-specs='{
+        "Motor": "EcoBoost V6 3.0L",
+    "Potencia": "418 HP",
+    "Suspensión": "HOSS 4.0 FOX Live Valve",
+    "Distancia al suelo": "13.1\""
+     }'>
+    <img src="bronco.png" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ford Bronco Raptor| Año 2024</h3>
+         <p class="price">$2,320,600</p>
+    </div>
+</div>
+
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ford Lobo| Año 2024"
+    data-price="$1,725,900"
+    data-image="lobo.png"
+    data-description="Una camioneta de tamaño completo diseñada para el trabajo, la familia y la aventura. Ofrece diversas opciones de motorización, cabina y caja para adaptarse a diferentes necesidades."
+    data-specs='{ 
+        "Potencia": "400 HP",
+    "Torque": "500 lb-pie",
+    "Carga": "884 kg",
+    "Arrastre": "5,942 kg"
+    }'>
+    <img src="lobo.png" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ford Lobo| Año 2024</h3>
+         <p class="price">$1,725,900</p>
+    </div>
+</div>
+
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Ram 1500 TRX| Año 2023"
+    data-price="2,199,900"
+    data-image="RAM_TRX_negra.jpg"
+    data-description="Una pick-up de alto rendimiento con un enfoque todoterreno extremo y un motor V8 sobrealimentado que ofrece una potencia impresionante.    "
+    data-specs='{ 
+        "Motor": "V8 Supercargado 6.2L",
+    "Potencia": "702 HP",
+    "Carga": "594 kg",
+    "Arrastre": "3,728 kg"
+    }'>
+    <img src="RAM_TRX_negra.jpg" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Ram 1500 TRX| Año 2023</h3>
+         <p class="price">2,199,900</p>
+    </div>
+</div>
+
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="GMC Sierrra| Año 2025"
+    data-price="$1,738,100"
+    data-image="gmc-sierra.jpg"
+    data-description="Una camioneta versátil y capaz, que ofrece una combinación de robustez, comodidad y tecnología."
+    data-specs='{ 
+        "Motor": "V8 5.3L",
+        "Potencia": "355 HP",
+        "Torque": "383 lb-pie",
+        "Arrastre": "4,082 kg"
+    }'>
+    <img src="gmc-sierra.jpg" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">GMC Sierrra| Año 2025</h3>
+         <p class="price">$1,738,100</p>
+    </div>
+</div>
+
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Shelby F-150 Raptor| Año 2024"
+    data-price="$2,400,000"
+    data-image="shelby-f-150-raptor-.jpg"
+    data-description="Es una ford f-150 raptor pero modoficada, esto con el fin de aunmentar la potencia y estetica al gusto del cliente"
+    data-specs='{
+        "Motor": "V8 Supercargado",
+        "Potencia": "720 HP",
+        "Suspensión": "FOX Racing Dual-Valve"
+     }'>
+    <img src="shelby-f-150-raptor-.jpg" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Shelby F-150 Raptor| Año 2024</h3>
+         <p class="price">$2,400,000</p>
+    </div>
+</div>
+
+    <div class="product-card" onclick="verDetalle(this)"
+    data-id=""
+    data-title="Can-am Maverick-R| Año 2025"
+    data-price="$845,900"
+    data-image="can-am maverick.jpg"
+    data-description=" Un vehículo recreativo todoterreno diseñado para ofrecer una experiencia emocionante y de alto rendimiento en terrenos difíciles."
+    data-specs='{
+        "Peso en seco": "1,205 kg",
+    "Altura al suelo": "43.2 cm",
+    "Capacidad de combustible": "50 L"
+     }'>
+    <img src="can-am maverick.jpg" alt="" class="product-image">
+    <div class="product-info">
+         <h3 class="product-title">Can-am Maverick-R| Año 2025</h3>
+         <p class="price">$845,900</p>
+    </div>
+</div>
+
+
+
+
+
+
+    </div>
+    </main>
+    <script>
+        // Obtén el elemento de la imagen y del audio
+        const imagen = document.getElementById('imagen');
+        const audio = document.getElementById('audio');
+
+        // Añade un evento de clic a la imagen
+        imagen.addEventListener('click', () => {
+            audio.play(); // Reproduce el sonido
+        });
+
+
+
+
+       
+ 
+  
+  function verDetalle(element) {
+    const carInfo = {
+      title: element.dataset.title,
+      price: element.dataset.price,
+      image: element.dataset.image,
+      description: element.dataset.description,
+      specs: JSON.parse(element.dataset.specs)
+    };
+
+    localStorage.setItem('car-info', JSON.stringify(carInfo));
+    window.location.href = "detalle.html"; // o el nombre de tu página de detalle
+  }
+
+
+
+    </script>
+</body>
+</html>

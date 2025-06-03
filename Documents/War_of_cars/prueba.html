@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of Cars</title>
+    <link rel="shortcut icon" href="2.png">
+    <link rel="stylesheet" href="prb.css">
+    <script defer src="pvp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    
+    <header class="top-rectangle" id="header">
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="prueba.html"><i class="fas fa-home"></i> INICIO</a></li>
+                <li><a href="autos.html"><i class="fas fa-car"></i> AUTOS</a></li>
+                <li><a href="motos.html"><i class="fas fa-motorcycle"></i> MOTOS</a></li>
+                <li><a href="deportivos.html"><i class="fas fa-car"></i> DEPORTIVOS</a></li>
+                <li><a href="contacto.html"><i class="fas fa-phone"></i> CONTACTANOS</a></li>
+                
+            </ul>
+            <h1 class="logo">WAR OF CARS</h1>
+        </nav>
+        <img class="logo-f" src="2.png" alt="Logo" id="imagen">
+        <audio src="motor-v8-plymouth-barracuda-encendido-acelerada-marcha-243224.mp3" id="audio"></audio>
+    </header>
+    <img src="eslogan.jpg" alt="" class="im-1">
+    <img src="About.png" alt="" class="im-2">
+    <img src="Services.png" alt="" class="im-3">
+    <img src="Contact.png" alt="" class="im-4">
+    
+    <script>
+        // Obtén el elemento de la imagen y del audio
+        const imagen = document.getElementById('imagen');
+        const audio = document.getElementById('audio');
+
+        // Añade un evento de clic a la imagen
+        imagen.addEventListener('click', () => {
+            audio.play(); // Reproduce el sonido
+        });
+    </script>
+</body>
+</html>

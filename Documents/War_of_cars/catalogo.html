@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firris Shop</title>
+    <link rel="shortcut icon" href="F-logo.png">
+    <link rel="stylesheet" href="prb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="pvp.js"></script>
+    <script defer src="products.js"></script>
+</head>
+
+<body>
+    <header class="top-rectangle" id="header">
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="prueba.html"><i class="fas fa-home"></i>Inicio</a></li>
+                <li><a href="#"><i class="fas fa-heart"></i> Favoritos</a></li>
+                <li class="catalogo"><a href="#"><i class="fas fa-th-large"></i> Catálogo</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                <li class="contacto"><a href="#"><i class="fas fa-phone"></i>Contacto</a>
+                    <div class="contact-info">
+                        <p>755-113-8776</p>
+                    </div>
+                </li>
+            </ul>
+          
+        </nav>
+        <h1 class="logo">Firris Shop</h1>
+        <img class="logo-f" src="F-logo.png" alt="">
+    </header>
+    <main class="product-detail">
+        <div id="catalog-products" class="product-grid">
+            <div class="product-detail-card" id="product-detail-card">
+                <div id="product-grid" class="product-grid">
+                    <!-- Los productos se generarán aquí -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtener la categoría de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('categoria');
+
+            // Filtrar productos por categoría
+            const filteredProducts = products.filter(product => product.categories.includes(category));
+
+            // Mostrar productos filtrados
+            const catalogProducts = document.getElementById('catalog-products');
+            catalogProducts.innerHTML = '';
+
+            filteredProducts.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.setAttribute('data-id', product.id); // Añadir el atributo data-id
+                productCard.innerHTML = `
+                        <a href="product-detail.html?id=${product.id}">
+                            <img src="${product.image}" alt="${product.title}">
+                            <div class="product-info">
+                                <h3>${product.title}</h3>
+                                <p>${product.description}</p>
+                                <p class="price">${product.price}</p>
+                            </div>
+                        </a>
+                    `;
+
+                catalogProducts.appendChild(productCard);
+            });
+
+            const categoryLinks = document.querySelectorAll('.category');
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const category = this.dataset.category;
+                    displayProductsByCategory(category);
+                });
+            });
+
+            function displayProductsByCategory(category) {
+                catalogProducts.innerHTML = ''; // Limpiar los productos existentes
+                const filteredProducts = products.filter(product => product.categories.includes(category));
+
+                filteredProducts.forEach(product => {
+                    const productCard = document.createElement('div');
+                    productCard.className = 'product-card';
+                    productCard.setAttribute('data-id', product.id); // Añadir el atributo data-id
+                    productCard.innerHTML = `
+                            <a href="product-detail.html?id=${product.id}">
+                                <img src="${product.image}" alt="${product.title}">
+                                <div class="product-info">
+                                    <h3>${product.title}</h3>
+                                    <p>${product.description}</p>
+                                    <p class="price">${product.price}</p>
+                                </div>
+                            </a>
+                        `;
+                    catalogProducts.appendChild(productCard);
+                });
+            }
+
+            const productCards = document.querySelectorAll('.product-card');
+
+            productCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    const productId = card.getAttribute('data-id');
+                    const product = products.find(p => p.id == productId);
+                    const params = new URLSearchParams({
+                        id: product.id,
+                        image: product.image,
+                        title: product.title,
+                        description: product.description,
+                        price: product.price,
+                        options: product.options.join(',')
+                    });
+                    window.location.href = `product-detail.html?${params.toString()}`;
+                });
+            });
+        });
+        
+    </script>
+</body>
+
+</html>

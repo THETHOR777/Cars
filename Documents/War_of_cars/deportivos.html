@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>War of Cars</title>
+    <link rel="shortcut icon" href="2.png">
+    <link rel="stylesheet" href="prb.css">
+    <script defer src="pvp.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="top-rectangle" id="header">
+        <nav class="menu">
+            <ul class="lista">
+                <li><a href="prueba.html"><i class="fas fa-home"></i> INICIO</a></li>
+                <li><a href="autos.html"><i class="fas fa-car"></i> AUTOS</a></li>
+                <li><a href="motos.html"><i class="fas fa-motorcycle"></i> MOTOS</a></li>
+                <li><a href="deportivos.html"><i class="fas fa-car"></i> DEPORTIVOS</a></li>
+                <li><a href="contacto.html"><i class="fas fa-phone"></i> CONTACTANOS</a></li>
+            </ul>
+            <h1 class="logo">WAR OF CARS</h1>
+        </nav>
+        <img class="logo-f" src="2.png" alt="Logo" id="imagen">
+        <audio src="import-car-revs-on-chassis-dyno-with-turbo-66272.mp3" id="audio"></audio>
+        
+    </header>
+    
+    <main class="product-detail">
+        <div id="main-products" class="product-grid">
+            <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Ford Munstang | Año 2024"
+            data-price="$4,409,800"
+            data-image="munstang 2024.jpg"
+            data-description="El Ford Mustang 2024 representa la séptima generación de este icónico muscle car. Mantiene su diseño atractivo y ofrece un rendimiento potente, destacando su motor 5.0L V8 con 486 HP y 418 lb-pie de torque."
+            data-specs='{
+                 "Motor": "V8 5.0L",
+    "Potencia": "480 HP",
+    "Transmisión": "Manual de 6 velocidades o automática de 10",
+    "Tracción": "Trasera"
+             }'>
+            <img src="munstang 2024.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Ford Munstang | Año 2024</h3>
+                 <p class="price">$4,409,800</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Ford Munstang GTD | Año 2025"
+            data-price="$4,299,980"
+            data-image="mustang-gtd.jpg"
+            data-description="Este es un supercar de alto rendimiento diseñado por Ford Performance. Cuenta con un motor V8 supercargado de 5.2L que apunta a más de 800 caballos de fuerza, acoplado a una transmisión de doble embrague de 8 velocidades."
+            data-specs='{ 
+                "Motor": "V8 5.2L Supercargado",
+    "Potencia": "800 HP (aproximado)",
+    "Transmisión": "Automática de doble embrague",
+    "Diseño": "Inspirado en autos GT3"
+            }'>
+            <img src="mustang-gtd.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Ford Munstang GTD | Año 2025</h3>
+                 <p class="price">$4,299,980</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Ford Munstang Shelby| Año 2025"
+            data-price="$1,200,000"
+            data-image="shelby.jpg"
+            data-description="Esta variante se centrará en un rendimiento mejorado, posiblemente con un motor más potente y ajustes de chasis específicos para una conducción más deportiva."
+            data-specs='{
+                "Motor": "V8 5.2L Supercargado",
+    "Potencia": "760 HP",
+    "Suspensión": "MagneRide ajustable",
+    "Frenos": "Brembo de alto rendimiento"
+             }'>
+            <img src="shelby.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Ford Munstang Shelby| Año 2025</h3>
+                 <p class="price">$1,200,000</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Ford Munstang Dark Horse| Año 2025"
+            data-price="$1,655,000"
+            data-image="dark horse.jpg"
+            data-description=" Este modelo se enfoca en el rendimiento en pista, equipado con un motor V8 Coyote de 5.0L modificado que produce 500 HP y 418 lb-pie de torque. Cuenta con frenos Brembo de gran tamaño y está disponible con un paquete de manejo Dark Horse que incluye ruedas de 19 pulgadas, soportes superiores de amortiguadores ajustables, ganchos de remolque delanteros, sistema de amortiguación magnética, splitter delantero de alto rendimiento y alerón trasero con gurney flap."
+            data-specs='{
+                "Motor": "V8 5.0L (versión mejorada)",
+    "Potencia": "500 HP",
+    "Transmisión": "Manual Tremec de 6 velocidades",
+    "Características": "Modos de manejo, enfriamiento para pista"
+             }'>
+            <img src="dark horse.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Ford Munstang Dark Horse| Año 2025</h3>
+                 <p class="price">$1,655,000</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Dodge Challenger Hell-Cat | Año 2025"
+            data-price="$1,000,000"
+            data-image="hell cat.jpg"
+            data-description="Los modelos Hellcat típicamente cuentan con un motor V8 supercargado de 6.2L HEMI, produciendo una potencia considerable (en modelos anteriores, hasta 717 HP o más)."
+            data-specs='{
+                "Motor": "V8 6.2L Supercargado",
+    "Potencia": "717 HP",
+    "0-100 km/h": "3.6 segundos",
+    "Transmisión": "Automática o manual"
+             }'>
+            <img src="hell cat.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Dodge Challenger Hell-Cat | Año 2025</h3>
+                 <p class="price">$1,000,000</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Dodge Challenger Hell-Cat Demon| Año 2025"
+            data-price="$779,980"
+            data-image="hell cat demon.jpg"
+            data-description=" El modelo 2023 contaba con un motor HEMI V8 supercargado de más de 1,000 HP y 945 lb-pie de torque, capaz de acelerar de 0 a 60 mph en 1.66 segundos. "
+            data-specs='{
+                "Motor": "V8 6.2L Supercargado",
+    "Potencia": "840 HP (con combustible de alto octanaje)",
+    "0-100 km/h": "2.3 segundos",
+    "Uso": "Optimizado para drag (arrancones)"
+             }'>
+            <img src="hell cat demon.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Dodge Challenger Hell-Cat Demon| Año 2025</h3>
+                 <p class="price">$779,980</p>
+            </div>
+        </div>   
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Ferrari SF90 XX| Año 2025"
+            data-price="$19,900,000"
+            data-image="Ferrari-SF90-XX-record-Fiorano.jpg"
+            data-description="Este es un superdeportivo híbrido enchufable que combina un motor V8 biturbo con tres motores eléctricos, generando una potencia total de 1,030 CV. Se enfoca en la aerodinámica activa para aumentar la carga aerodinámica. "
+            data-specs='{ 
+                "Motor": "V8 Híbrido Plug-in",
+    "Potencia": "1,030 HP",
+    "Transmisión": "Automática de doble embrague",
+    "Tracción": "Total (AWD)"
+            }'>
+            <img src="Ferrari-SF90-XX-record-Fiorano.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Ferrari SF90 XX| Año 2025</h3>
+                 <p class="price">$19,900,000</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Chevrolet Corvete Z06| Año 2025"
+            data-price="$4,042,400"
+            data-image="corvete z06.jpg"
+            data-description="El Corvette Z06 2025 cuenta con un motor V8 de 5.5L atmosférico que produce 670 HP, lo que lo convierte en el motor atmosférico más potente en un coche de producción. Tiene una transmisión automática DCT de 8 velocidades y suspensión Magnetic Ride Control 4.0."
+            data-specs='{
+                "Motor": "V8 5.5L LT6 atmosférico",
+    "Potencia": "670 HP",
+    "Revoluciones": "8,600 rpm",
+    "Transmisión": "Automática de doble embrague de 8 velocidades"
+             }'>
+            <img src="corvete z06.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Chevrolet Corvete Z06| Año 2025</h3>
+                 <p class="price">$4,042,400</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Chevrolet Corvete ZR1| Año 2025"
+            data-price="$4,434,800"
+            data-image="corvete zr1.jpg"
+            data-description="  El Corvette ZR1 2025 se posiciona como el más rápido jamás construido por un fabricante de automóviles estadounidense, con una velocidad máxima de 233 mph (375 km/h) y una aceleración de 0 a 60 mph en 2.3 segundos con el paquete ZTK disponible."
+            data-specs='{
+                "Motor": "V8 6.2L Supercargado",
+    "Potencia": "755 HP",
+    "Aceleración": "0-100 km/h en 2.9 segundos",
+    "Tracción": "Trasera"
+             }'>
+            <img src="corvete zr1.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Chevrolet Corvete ZR1| Año 2025</h3>
+                 <p class="price">$4,434,800</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Lamborghini Aventador| Año 2022"
+            data-price="$12,120,924"
+            data-image="lamborghini aventador.jpg"
+            data-description="Este superdeportivo cuenta con un motor V12 de 6.5L que produce 740 CV. Su velocidad máxima es de 350 km/h (217 mph) y acelera de 0 a 100 km/h en 2.9 segundos. Utiliza una transmisión ISR de 7 marchas y tracción integral controlada electrónicamente."
+            data-specs='{
+                "Motor": "V12 6.5L",
+    "Potencia": "769 HP",
+    "Tracción": "AWD (Total)",
+    "Transmisión": "Automática ISR de 7 velocidades"
+             }'>
+            <img src="lamborghini aventador.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Lamborghini Aventador| Año 2022</h3>
+                 <p class="price">$12,120,924</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Chevrolet Camaro ZL1| Año 2024"
+            data-price="$2,315,000"
+            data-image="chevrolet-camaro-zl1.jpg"
+            data-description=" El Camaro ZL1 2024 está equipado con un motor V8 supercargado de 6.2L que produce 650 HP. Ofrece características de rendimiento como Magnetic Ride Control y un diferencial electrónico de deslizamiento limitado. Estéticamente, presenta detalles como un capó satinado negro, rines de aluminio de 20 pulgadas y un alerón trasero negro."
+            data-specs='{
+                "Motor": "V8 6.2L Supercargado",
+    "Potencia": "650 HP",
+    "Transmisión": "Manual de 6 o automática de 10 velocidades",
+    "Frenos": "Brembo de alto rendimiento"
+             }'>
+            <img src="chevrolet-camaro-zl1.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Chevrolet Camaro ZL1| Año 2024</h3>
+                 <p class="price">$2,315,000</p>
+            </div>
+        </div>
+         <div class="product-card" onclick="verDetalle(this)"
+            data-id=""
+            data-title="Pagani Huayra| Año 2024"
+            data-price="$71,400,000"
+            data-image="Pagani-Huayra-2024.jpg"
+            data-description=" Este hipercoche italiano está propulsado por un motor V12 biturbo de Mercedes-AMG que produce 840 CV y 1100 N·m de par. Cuenta con una transmisión manual automatizada XTrac de 7 velocidades. Su diseño se centra en la eficiencia aerodinámica, con un alerón trasero rediseñado y un splitter delantero mejorado. "
+            data-specs='{
+                "Motor": "V12 6.0L Twin-Turbo (AMG)",
+    "Potencia": "791 HP",
+    "Chasis": "Fibra de carbono",
+    "Velocidad máxima": "370 km/h"
+             }'>
+            <img src="Pagani-Huayra-2024.jpg" alt="" class="product-image">
+            <div class="product-info">
+                 <h3 class="product-title">Pagani Huayra| Año 2024</h3>
+                 <p class="price">$71,400,000</p>
+            </div>
+        </div>
+        
+        </div>
+    </main>
+    
+    
+    <script>
+        // Obtén el elemento de la imagen y del audio
+        const imagen = document.getElementById('imagen');
+        const audio = document.getElementById('audio');
+
+        // Añade un evento de clic a la imagen
+        imagen.addEventListener('click', () => {
+            audio.play(); // Reproduce el sonido
+        });
+
+        function verDetalle(element) {
+    const carInfo = {
+      title: element.dataset.title,
+      price: element.dataset.price,
+      image: element.dataset.image,
+      description: element.dataset.description,
+      specs: JSON.parse(element.dataset.specs)
+    };
+
+    localStorage.setItem('car-info', JSON.stringify(carInfo));
+    window.location.href = "detalle.html"; // o el nombre de tu página de detalle
+  }
+
+    </script>
+</body>
+</html>
